@@ -1,4 +1,4 @@
-name: php
+name: wine
 version: 0.0.1
 inherits: wercker/ubuntu12.04-webessentials@1.0.0
 type: main
