@@ -1,5 +1,5 @@
 name: wine
-version: 0.0.2
+version: 0.0.3
 inherits: wercker/ubuntu12.04-webessentials@1.0.0
 type: main
 description: A box that is running the latest stable version of Wine.
@@ -9,9 +9,11 @@ keywords:
 packages:
   - wine@1.6
 script: |
-  # Add repository that contains php packages
+  # Install wine
   sudo add-apt-repository ppa:ubuntu-wine/ppa -y
+  sudo sed -i 's/main/main universe/' /etc/apt/sources.list
   sudo apt-get update
-
-  # Install wine latest stable
-  sudo apt-get install wine1.6 -y
+  sudo apt-get install wine1.7 winetricks -y
+  
+  # Enable some networking calls
+  sudo winetricks wininet
