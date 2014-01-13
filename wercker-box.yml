@@ -7,7 +7,7 @@ keywords:
   - wine
   - windows
 packages:
-  - wine@1.6
+  - wine@1.7
 script: |
   # Install wine
   sudo add-apt-repository ppa:ubuntu-wine/ppa -y
