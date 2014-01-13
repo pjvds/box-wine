@@ -14,6 +14,3 @@ script: |
   sudo sed -i 's/main/main universe/' /etc/apt/sources.list
   sudo apt-get update
   sudo apt-get install wine1.7 winetricks -y
-  
-  # Enable some networking calls
-  sudo winetricks wininet
